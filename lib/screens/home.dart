@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.purple,
-        elevation: 0,
+        elevation: 10,
         centerTitle: true,
       ),
       backgroundColor: Colors.purple,
