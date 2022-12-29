@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bmi_calculator/constants/app_const.dart';
 import 'package:bmi_calculator/widgets/left_bar.dart';
 import 'package:bmi_calculator/widgets/right_bar.dart';
 import 'package:flutter/material.dart';
@@ -24,13 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text(
           'BMI Calcumator',
-          style: TextStyle(color: accentHexColor, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.purple,
         elevation: 0,
         centerTitle: true,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.purple,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -43,26 +42,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: 140,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.yellow, width: 2),
+                      border: Border.all(color: Colors.white, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
                   width: 150,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 30),
+                  child: Center(
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: _heightController,
                       style: TextStyle(
                           fontSize: 42,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.bold,
                           color: Colors.white),
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: "Height",
+                          hintText: "Height(m)",
                           hintStyle: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.w300,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
                               color: Colors.white.withOpacity(.8))),
                     ),
                   ),
@@ -70,26 +68,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: 140,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.yellow, width: 2),
+                      border: Border.all(color: Colors.white, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
                   width: 150,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 30),
+                  child: Center(
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: _weightController,
                       style: TextStyle(
                           fontSize: 42,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.bold,
                           color: Colors.white),
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: "Weight",
+                          hintText: "Weight(kg)",
                           hintStyle: TextStyle(
-                              fontSize: 42,
-                              fontWeight: FontWeight.w300,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
                               color: Colors.white.withOpacity(.8))),
                     ),
                   ),
@@ -115,19 +112,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 });
               },
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 25),
                 width: MediaQuery.of(context).size.width,
                 height: 50,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.transparent),
+                    color: Colors.redAccent[700]),
                 child: Center(
                   child: Text(
                     'Calculate',
                     style: TextStyle(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
-                        color: Colors.red),
+                        color: Colors.white),
                   ),
                 ),
               ),
@@ -148,8 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 _textResult,
                 style: TextStyle(
                     fontSize: 32,
-                    color: accentHexColor,
-                    fontWeight: FontWeight.w400),
+                    color: Colors.yellowAccent,
+                    fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(
