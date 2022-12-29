@@ -40,40 +40,58 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  width: 130,
-                  child: TextField(
-                    controller: _heightController,
-                    style: TextStyle(
-                        fontSize: 42,
-                        fontWeight: FontWeight.w300,
-                        color: accentHexColor),
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Height",
-                        hintStyle: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white.withOpacity(.8))),
+                Container(
+                  height: 140,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.yellow, width: 2),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white10),
+                  width: 150,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: TextField(
+                      textAlign: TextAlign.center,
+                      controller: _heightController,
+                      style: TextStyle(
+                          fontSize: 42,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white),
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Height",
+                          hintStyle: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white.withOpacity(.8))),
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: 130,
-                  child: TextField(
-                    controller: _weightController,
-                    style: TextStyle(
-                        fontSize: 42,
-                        fontWeight: FontWeight.w300,
-                        color: accentHexColor),
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Weight",
-                        hintStyle: TextStyle(
-                            fontSize: 42,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white.withOpacity(.8))),
+                Container(
+                  height: 140,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.yellow, width: 2),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white10),
+                  width: 150,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: TextField(
+                      textAlign: TextAlign.center,
+                      controller: _weightController,
+                      style: TextStyle(
+                          fontSize: 42,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white),
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Weight",
+                          hintStyle: TextStyle(
+                              fontSize: 42,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white.withOpacity(.8))),
+                    ),
                   ),
                 ),
               ],
@@ -96,12 +114,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   }
                 });
               },
-              child: Text(
-                'Calculate',
-                style: TextStyle(
-                    fontSize: 42,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red),
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.transparent),
+                child: Center(
+                  child: Text(
+                    'Calculate',
+                    style: TextStyle(
+                        fontSize: 42,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red),
+                  ),
+                ),
               ),
             ),
             SizedBox(
