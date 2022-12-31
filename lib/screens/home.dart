@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bmi_calculator/widgets/dimensions.dart';
 import 'package:bmi_calculator/widgets/left_bar.dart';
 import 'package:bmi_calculator/widgets/right_bar.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //hei - 825,wid-392
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -34,24 +36,24 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 20,
+              height: Dimensions.height20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  height: 140,
+                  height: Dimensions.height140,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
-                  width: 150,
+                  width: Dimensions.width150,
                   child: Center(
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: _heightController,
                       style: TextStyle(
-                          fontSize: 42,
+                          fontSize: Dimensions.font42,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                       keyboardType: TextInputType.number,
@@ -59,25 +61,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           border: InputBorder.none,
                           hintText: "Height(m)",
                           hintStyle: TextStyle(
-                              fontSize: 30,
+                              fontSize: Dimensions.font30,
                               fontWeight: FontWeight.w500,
                               color: Colors.white.withOpacity(.8))),
                     ),
                   ),
                 ),
                 Container(
-                  height: 140,
+                  height: Dimensions.height140,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
-                  width: 150,
+                  width: Dimensions.width150,
                   child: Center(
                     child: TextField(
                       textAlign: TextAlign.center,
                       controller: _weightController,
                       style: TextStyle(
-                          fontSize: 42,
+                          fontSize: Dimensions.font42,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                       keyboardType: TextInputType.number,
@@ -85,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           border: InputBorder.none,
                           hintText: "Weight(kg)",
                           hintStyle: TextStyle(
-                              fontSize: 30,
+                              fontSize: Dimensions.font30,
                               fontWeight: FontWeight.w500,
                               color: Colors.white.withOpacity(.8))),
                     ),
@@ -94,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(
-              height: 30,
+              height: Dimensions.height30,
             ),
             GestureDetector(
               onTap: () {
@@ -114,15 +116,15 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 25),
                 width: MediaQuery.of(context).size.width,
-                height: 50,
+                height: Dimensions.height50,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(Dimensions.radius10),
                     color: Colors.redAccent[700]),
                 child: Center(
                   child: Text(
                     'Calculate',
                     style: TextStyle(
-                        fontSize: 42,
+                        fontSize: Dimensions.font30 * 1.3,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
@@ -130,45 +132,46 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: Dimensions.height50,
             ),
             Text(
               _bmiResult.toStringAsFixed(2),
-              style: TextStyle(fontSize: 90, color: Colors.white),
+              style: TextStyle(
+                  fontSize: Dimensions.font30 * 3, color: Colors.white),
             ),
             SizedBox(
-              height: 30,
+              height: Dimensions.height30,
             ),
             Visibility(
               visible: _textResult.isNotEmpty,
               child: Text(
                 _textResult,
                 style: TextStyle(
-                    fontSize: 32,
+                    fontSize: Dimensions.font30,
                     color: Colors.yellowAccent,
                     fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(
-              height: 10,
+              height: Dimensions.height20 / 2,
             ),
-            LeftBar(barWidth: 40),
+            LeftBar(barWidth: Dimensions.width40),
             SizedBox(
-              height: 20,
+              height: Dimensions.height20,
             ),
-            LeftBar(barWidth: 70),
+            LeftBar(barWidth: Dimensions.width70),
             SizedBox(
-              height: 20,
+              height: Dimensions.height20,
             ),
-            LeftBar(barWidth: 40),
+            LeftBar(barWidth: Dimensions.width40),
             SizedBox(
-              height: 20,
+              height: Dimensions.height20,
             ),
-            RightBar(barWidth: 70),
+            RightBar(barWidth: Dimensions.width70),
             SizedBox(
-              height: 50,
+              height: Dimensions.height50,
             ),
-            RightBar(barWidth: 70),
+            RightBar(barWidth: Dimensions.width70),
           ],
         ),
       ),
