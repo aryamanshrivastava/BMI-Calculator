@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
 class Dimensions {
-  static double screenHeight = Get.context!.height;
-  static double screenWidth = Get.context!.width;
+  static double screenHeight = Get.context!.height;//825
+  static double screenWidth = Get.context!.width;//392
 
   static double height20 = screenHeight / 42;
   static double height30 = screenHeight / 27.5;

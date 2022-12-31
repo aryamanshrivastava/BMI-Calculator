@@ -20,18 +20,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //hei - 825,wid-392
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'BMI Calcumator',
+          'BMI Calculator',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.black,
         elevation: 10,
         centerTitle: true,
       ),
-      backgroundColor: Colors.purple,
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -44,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: Dimensions.height140,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white, width: 2),
+                      border: Border.all(color: Colors.orangeAccent, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
                   width: Dimensions.width150,
@@ -70,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: Dimensions.height140,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white, width: 2),
+                      border: Border.all(color: Colors.orangeAccent, width: 2),
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white10),
                   width: Dimensions.width150,
@@ -119,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: Dimensions.height50,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(Dimensions.radius10),
-                    color: Colors.redAccent[700]),
+                    color: Colors.orangeAccent[700]),
                 child: Center(
                   child: Text(
                     'Calculate',
