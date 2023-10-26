@@ -1,0 +1,19 @@
+<!-- Before -->
+<color name="example_color">#FFFFFF</color>
+
+<!-- After -->
+<color name="example_color">#000000</color>
+```
+
+And here's a general example of how to change a color definition in a JSON file:
+
+```json
+// Before
+{
+  "example_color": "#FFFFFF"
+}
+
+// After
+{
+  "example_color": "#000000"
+}
